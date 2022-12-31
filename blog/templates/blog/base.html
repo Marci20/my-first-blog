@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+    <head>
+        <title>Első adatbázis</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h1><a href="/">Első adatbázis</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+
+        <h1>Magyar olimpiai bajnokok</h1>
+        
+        </a> <h4><a href="https://waterpolo.hu/index.html">73 vízilabda (9 aranyérem),</a></h4>
+        </a> <h4><a href="https://hunfencing.hu/">57 vívás (38),</a></h4>
+        </a> <h4><a href="https://hu.wikipedia.org/wiki/Magyar_labdar%C3%BAg%C3%B3-v%C3%A1logatott">45 labdarúgás (3),</a></h4>
+        </a> <h4><a href="https://kajakkenusport.hu/">36 kajak-kenu (28),</a></h4>
+        </a> <h4><a href="https://musz.hu/">21 úszás (29),</a></h4>
+        </a> <h4><a href="https://www.birkozoszov.hu/">19 birkózás (20),</a></h4>
+        </a> <h4><a href="https://matsz.hu/">13 torna (15),</a></h4>
+        </a> <h4><a href="https://myaccount.google.com/">2 öttusa (9),</a></h4>
+        </a> <h4><a href="https://www.atletika.hu/kezdolap">10 atlétika (10),</a></h4>
+        </a> <h4><a href="https://www.boxing.hu/">8 ökölvívás (10),</a></h4>
+        </a> <h4><a href="https://www.hunshooting.hu/">6 sportlövészet (7),</a></h4>
+        </a> <h4><a href="http://hunskate.hu/hirek/tag/rovidpalyas-gyorskorcsolya">4 rövidpályás gyorskorcsolya (2),</a></h4>
+        </a> <h4><a href="http://mssz.hu/">2 súlyemelés (2),</a></h4>
+        </a> <h4><a href="http://www.cselgancs.hu/">1 cselgáncs (1),</a></h4>
+
+      
+     
+
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
